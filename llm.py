@@ -11,14 +11,8 @@ import pandas as pd
 from dotenv import load_dotenv
 
 load_dotenv()
-
-# Optional override from .env:  GROQ_MODEL=some-model-id
-# If not set, the app asks Groq which models are currently available and picks one.
 GROQ_MODEL = os.getenv("GROQ_MODEL", "").strip()
-
-# Words in a model id that mean "not a normal chat model" -> skip these
 _SKIP = ("whisper", "tts", "guard", "safeguard", "embed", "compound", "orpheus", "distil-whisper")
-# Preferred model families, best first (matched as substrings of the model id)
 _PREFER = ("llama-4", "gpt-oss-120b", "qwen", "llama-3.3", "gpt-oss-20b", "llama-3.1", "llama")
 
 SYSTEM_PROMPT = """You are an expert teacher who creates revision flashcards for students.

@@ -1,6 +1,4 @@
-"""Flashcard Generator - Streamlit UI (PS22).
-Run:  streamlit run app.py
-"""
+
 import streamlit as st
 
 from llm import generate_flashcards

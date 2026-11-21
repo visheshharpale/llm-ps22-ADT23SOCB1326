@@ -71,11 +71,11 @@ question-answer flashcards using an LLM and lets the student export them as a CS
 
 ## Prompt Design
 The system prompt tells the model to:
-- use **only** the information in the notes (no invented facts),
+- use only the information in the notes (no invented facts),
 - create one idea per card with short, accurate answers,
 - mix question types (definitions, why/how, comparisons, examples),
 - avoid duplicates,
-- return **valid JSON only** in the form `{"flashcards": [{"question": "...", "answer": "..."}]}`.
+- return valid JSON only in the form `{"flashcards": [{"question": "...", "answer": "..."}]}`.
 
 ## Error Handling
 - Retries automatically (with waiting) on rate-limit or temporary server errors.
