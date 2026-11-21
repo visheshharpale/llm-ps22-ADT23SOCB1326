@@ -1,7 +1,3 @@
-"""LLM logic for the Flashcard Generator (PS22) - Groq only.
-
-Flow: notes -> build prompt -> call Groq LLM -> parse JSON -> pandas DataFrame
-"""
 import json
 import os
 import re
